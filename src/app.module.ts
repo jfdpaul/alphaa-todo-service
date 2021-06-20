@@ -9,8 +9,7 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
-      process.env.DB_URL ||
-        'mongodb+srv://root:MyPrCIp3odNHEWGV@alphaa-todo-dev-test.vjkqv.mongodb.net/alphaa-todos?authSource=admin&replicaSet=atlas-h2qjon-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true',
+      process.env.DB_URL || 'mongodb://localhost:27017/alphaa-todos',
     ),
     MongooseModule.forFeature([{ name: Todo.name, schema: TodoSchema }]),
   ],
