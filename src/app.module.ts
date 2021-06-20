@@ -10,7 +10,7 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
       process.env.DB_URL ||
-        'mongodb://root:MyPrCIp3odNHEWGV@localhost:27017/alphaa-todos',
+        'mongodb+srv://root:MyPrCIp3odNHEWGV@alphaa-todo-dev-test.vjkqv.mongodb.net/alphaa-todos?authSource=admin&replicaSet=atlas-h2qjon-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true',
     ),
     MongooseModule.forFeature([{ name: Todo.name, schema: TodoSchema }]),
   ],
